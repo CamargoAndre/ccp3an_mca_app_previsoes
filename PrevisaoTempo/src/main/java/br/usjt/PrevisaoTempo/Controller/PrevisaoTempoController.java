@@ -17,7 +17,7 @@ public class PrevisaoTempoController {
 	@Autowired
 	private PrevisaoTempoRepository prevTempoRepo;
 	
-	@GetMapping("/previsaotempo")
+	@GetMapping("/previsoestempo")
 	public ModelAndView listarPrevisaoTempo() {
 		
 		//passe o nome da pagina ao contrutor

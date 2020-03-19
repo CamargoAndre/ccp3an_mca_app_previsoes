@@ -17,27 +17,24 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th>Nome</th>
-							<th>Média</th>
+							<th>Data</th>
+							<th>Mínima</th>
+							<th>Máxima</th>
+							<th>Humidade do Ar</th>
+							<th>Observação</th>
 						</tr>
 					</thead>
 					<tbody>
-					<!-- 	<tr th:each="aluno:${alunos}">
-							<td th:text="${aluno.nome}"></td>
-							<td th:text="${aluno.mediaNotas}"></td>
+					 	<tr th:each="prevTemp:${previsoesTempo}">
+							<td th:text="${prevTemp.diaSemana}"></td>
+							<td th:text="${prevTemp.tempMinimo}"></td>
+							<td th:text="${prevTemp.tempMaximo}"></td>
+							<td th:text="${prevTemp.humidade}"></td>
+							<td th:text="${prevTemp.descricao}"></td>
 						</tr>
-					-->
+					
 					</tbody>
 				</table>
-				<!-- 
-				<form class="form-inline" method="POST" th:object="${aluno}" th:action="@{/alunos}" style="margin:20px 0">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Nome" th:field="*{nome}" />
-						<input type="text" class="form-control" placeholder="Média" th:field="*{mediaNotas}"/>
-						<button type="submit" class="btn btn-primary">Adicionar</button>
-					</div>
-				</form>
-				-->
 			</div>
 		</div>
 	</body>
