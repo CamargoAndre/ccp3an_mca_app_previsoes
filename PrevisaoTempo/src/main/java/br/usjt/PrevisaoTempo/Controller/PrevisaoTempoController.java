@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.usjt.PrevisaoTempo.Repository.PrevisaoTempoRepository;
-import br.usjt.PrevisaoTempo.model.PrevisaoTempo;
+import br.usjt.PrevisaoTempo.model.PrevisaoTemperatura;
 
 @Controller
 public class PrevisaoTempoController {
@@ -24,10 +24,13 @@ public class PrevisaoTempoController {
 		ModelAndView mv = new ModelAndView("listar_previsao_tempo");
 		
 		//Busque a coleção com o repositório
-		List<PrevisaoTempo> previsoesTempo = prevTempoRepo.findAll();
+		List<PrevisaoTemperatura> previsoesTempo = prevTempoRepo.findAll();
 		
 		//Adicione a coleção ao objeto ModelAndView
 		mv.addObject("previsoesTempo", previsoesTempo);
+		
+		//para modelar o formulario
+				mv.addObject(new PrevisaoTemperatura());
 		
 		//devolva o ModelAndView
 		return mv;

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class PrevisaoTempo implements Serializable{
+public class PrevisaoTemperatura implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
