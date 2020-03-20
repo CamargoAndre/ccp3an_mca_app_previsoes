@@ -17,7 +17,7 @@ public class PrevTempoController {
 	@Autowired
 	private PrevTempoRepository prevTempoRepo;
 	
-	@GetMapping("/prevtempo")
+	@GetMapping("/tempo")
 	public ModelAndView listarPrevisaoTempo() {
 		
 		//passe o nome da pagina ao contrutor
@@ -27,7 +27,9 @@ public class PrevTempoController {
 		List<PrevTempo> prevsTemp = prevTempoRepo.findAll();
 		
 		//Adicione a coleção ao objeto ModelAndView
-		mv.addObject("prevsTemps", prevsTemp);
+		mv.addObject("temp", prevsTemp);
+		
+		mv.addObject(new PrevTempo());
 		
 		//devolva o ModelAndView
 		return mv;

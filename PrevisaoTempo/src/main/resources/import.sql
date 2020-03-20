@@ -1,2 +1,2 @@
-insert into prevtempo(id, diasemana, tempm_min, temp_max, humidade, descricao) values(1, 'Quinta 19/03' , 24 , 28 , 60 , 'Nuvens Espalhadas');
-insert into prevtempo(id, diasemana, tempm_min, temp_max, humidade, descricao) values(2, 'Sexta  20/03' , 19 , 25 , 83 , 'Possibilidade de Chuva');
+insert into prev_tempo(id, dia_semana, temp_min, temp_max, umidade, descricao) values(1, 'Quinta 19/03' , 24 , 28 , 60 , 'Nuvens Espalhadas');
+insert into prev_tempo(id, dia_semana, temp_min, temp_max, umidade, descricao) values(2, 'Sexta  20/03' , 19 , 25 , 83 , 'Possibilidade de Chuva');

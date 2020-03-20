@@ -20,16 +20,16 @@
 							<th>Data</th>
 							<th>Mínima</th>
 							<th>Máxima</th>
-							<th>Humidade do Ar</th>
+							<th>Umidade do Ar</th>
 							<th>Observação</th>
 						</tr>
 					</thead>
 					<tbody>
-					 	<tr th:each="prevTemp:${prevsTempo}">
+					 	<tr th:each="prevTemp:${temp}">
 							<td th:text="${prevTemp.diaSemana}"></td>
-							<td th:text="${prevTemp.tempMin}"></td>
-							<td th:text="${prevTemp.tempMax}"></td>
-							<td th:text="${prevTemp.humidade}"></td>
+							<td th:text="${prevTemp.tempMin} + ' ºC'"></td>
+							<td th:text="${prevTemp.tempMax} + ' ºC'"></td>
+							<td th:text="${prevTemp.umidade} + '%'"></td>
 							<td th:text="${prevTemp.descricao}"></td>
 						</tr>
 					

@@ -17,7 +17,7 @@ public class PrevTempo implements Serializable{
 	private String diaSemana;
 	private Double tempMin;
 	private Double tempMax;
-	private Integer humidade;
+	private Integer umidade;
 	private String descricao;
 	
 	//Getters / Setters
@@ -46,11 +46,11 @@ public class PrevTempo implements Serializable{
 	public void setTempMax(Double tempMax) {
 		this.tempMax = tempMax;
 	}
-	public Integer getHumidade() {
-		return humidade;
+	public Integer getUmidade() {
+		return umidade;
 	}
-	public void setHumidade(Integer humidade) {
-		this.humidade = humidade;
+	public void setUmidade(Integer umidade) {
+		this.umidade = umidade;
 	}
 	public String getDescricao() {
 		return descricao;
