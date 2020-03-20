@@ -9,14 +9,14 @@ import javax.persistence.Id;
 
 
 @Entity
-public class PrevisaoTemperatura implements Serializable{
+public class PrevTempo implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String diaSemana;
-	private Double tempMinimo;
-	private Double tempMaximo;
+	private Double tempMin;
+	private Double tempMax;
 	private Integer humidade;
 	private String descricao;
 	
@@ -34,17 +34,17 @@ public class PrevisaoTemperatura implements Serializable{
 	public void setDiaSemana(String diaSemana) {
 		this.diaSemana = diaSemana;
 	}
-	public Double getTempMinimo() {
-		return tempMinimo;
+	public Double getTempMin() {
+		return tempMin;
 	}
-	public void setTempMinimo(Double tempMinimo) {
-		this.tempMinimo = tempMinimo;
+	public void setTempMin(Double tempMin) {
+		this.tempMin = tempMin;
 	}
-	public Double getTempMaximo() {
-		return tempMaximo;
+	public Double getTempMax() {
+		return tempMax;
 	}
-	public void setTempMaximo(Double tempMaximo) {
-		this.tempMaximo = tempMaximo;
+	public void setTempMax(Double tempMax) {
+		this.tempMax = tempMax;
 	}
 	public Integer getHumidade() {
 		return humidade;

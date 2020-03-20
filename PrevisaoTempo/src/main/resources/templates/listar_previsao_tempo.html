@@ -25,10 +25,10 @@
 						</tr>
 					</thead>
 					<tbody>
-					 	<tr th:each="prevTemp:${previsoesTempo}">
+					 	<tr th:each="prevTemp:${prevsTempo}">
 							<td th:text="${prevTemp.diaSemana}"></td>
-							<td th:text="${prevTemp.tempMinimo}"></td>
-							<td th:text="${prevTemp.tempMaximo}"></td>
+							<td th:text="${prevTemp.tempMin}"></td>
+							<td th:text="${prevTemp.tempMax}"></td>
 							<td th:text="${prevTemp.humidade}"></td>
 							<td th:text="${prevTemp.descricao}"></td>
 						</tr>
