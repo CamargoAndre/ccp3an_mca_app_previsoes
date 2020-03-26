@@ -1,4 +1,4 @@
-package br.usjt.PrevisaoTempo.Repository;
+package br.usjt.PrevisaoTempo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
