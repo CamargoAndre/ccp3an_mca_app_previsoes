@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.usjt.PrevisaoTempo.model.PrevTempo;
@@ -31,12 +32,17 @@ public class PrevTempoController {
 		//Adicione a coleção ao objeto ModelAndView
 		mv.addObject("temp", prevsTemp);
 		
-		//mv.addObject(new PrevTempo());
+		mv.addObject(new PrevTempo());
 		
 		//devolva o ModelAndView
 		return mv;
 		
 	}
 	
+	@PostMapping("/tempo")
+	public String salvar(PrevTempo prevTempo) {
+		prevTempoService.salvar(prevTempo);
+		return "redirect:/tempo";
+	}
 
 }

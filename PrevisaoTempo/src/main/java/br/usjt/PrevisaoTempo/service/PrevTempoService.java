@@ -20,5 +20,11 @@ public class PrevTempoService {
 		
 	}
 	
+	public void salvar(PrevTempo prevTempo) {
+		
+		prevTempoRepo.save(prevTempo);
+		
+	}
+	
 
 }

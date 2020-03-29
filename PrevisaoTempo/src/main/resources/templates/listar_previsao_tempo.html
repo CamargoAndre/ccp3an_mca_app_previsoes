@@ -14,23 +14,42 @@
 				<h3 class="panel-display-4"> Cidade de São Paulo</h3>
 			</div>
 			<div class="panel-body">
+				<form class="form-inline" method="POST" th:object="${prevTempo}" th:action="@{/tempo}" style="margin:20px 0">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Data / Hora" th:field="*{dataHora}"/>
+						<input type="text" class="form-control" placeholder="Dia da Semana" th:field="*{diaSemana}"/>
+						<input type="text" class="form-control" placeholder="Temperatura Minima" th:field="*{tempMin}"/>
+						<input type="text" class="form-control" placeholder="Temperatura Maxima" th:field="*{tempMax}"/>
+						<input type="text" class="form-control" placeholder="Umidade Relativa do Ar" th:field="*{umidade}"/>
+						<input type="text" class="form-control" placeholder="Descrição" th:field="*{descricao}" />
+						<input type="text" class="form-control" placeholder="latitude" th:field="*{latitude}"/>
+						<input type="text" class="form-control" placeholder="Longitude" th:field="*{longitude}"/>
+						<button type="submit" class="btn btn-primary">Adicionar</button>
+					</div>
+				</form>
 				<table class="table">
 					<thead>
 						<tr>
-							<th>Data</th>
+							<th>Data / Hora</th>
+							<th>Dia da Semana</th>
 							<th>Mínima</th>
 							<th>Máxima</th>
 							<th>Umidade do Ar</th>
 							<th>Observação</th>
+							<th>Latitude</th>
+							<th>Longitude</th>
 						</tr>
 					</thead>
 					<tbody>
 					 	<tr th:each="prevTemp:${temp}">
+					 		<td th:text="${prevTemp.dataHora}"></td>
 							<td th:text="${prevTemp.diaSemana}"></td>
 							<td th:text="${prevTemp.tempMin} + ' ºC'"></td>
 							<td th:text="${prevTemp.tempMax} + ' ºC'"></td>
 							<td th:text="${prevTemp.umidade} + '%'"></td>
 							<td th:text="${prevTemp.descricao}"></td>
+							<td th:text="${prevTemp.latitude}"></td>
+							<td th:text="${prevTemp.longitude}"></td>
 						</tr>
 					
 					</tbody>
