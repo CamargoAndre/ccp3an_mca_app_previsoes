@@ -2,12 +2,14 @@ package br.usjt.PrevisaoTempo.model;
 
 
 import java.io.Serializable;
-import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
@@ -21,9 +23,10 @@ public class PrevTempo implements Serializable{
 	private Double tempMax;
 	private Integer umidade;
 	private String diaSemana;
-	private String dataHora;
-	private  Long latitude;
-	private Long longitude;
+	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+	private Date dataHora;
+	private  Double latitude;
+	private Double longitude;
 	
 	
 	//Getters / Setters
@@ -63,22 +66,22 @@ public class PrevTempo implements Serializable{
 	public void setDiaSemana(String diaSemana) {
 		this.diaSemana = diaSemana;
 	}
-	public String getDataHora() {
+	public Date getDataHora() {
 		return dataHora;
 	}
-	public void setDataHora(String dataHora) {
+	public void setDataHora(Date dataHora) {
 		this.dataHora = dataHora;
 	}
-	public Long getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(Long latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
-	public Long getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(Long longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 	
