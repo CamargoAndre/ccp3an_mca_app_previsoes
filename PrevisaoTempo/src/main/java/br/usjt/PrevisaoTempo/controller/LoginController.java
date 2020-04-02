@@ -39,4 +39,12 @@ public class LoginController {
 		}
 		
 	}
+	
+	@PostMapping("/fazerLogout")
+	public String fazerLogout(HttpServletRequest request) {
+		
+		request.getSession().removeAttribute("usuarioLogado");
+		return "redirect:login";
+	}
+	
 }

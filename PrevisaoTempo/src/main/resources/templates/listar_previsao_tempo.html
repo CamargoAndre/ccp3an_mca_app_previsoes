@@ -54,6 +54,13 @@
 					
 					</tbody>
 				</table>
+				
+				<form class="form-inline" method="POST" th:object="${usuario}" th:action="@{/fazerLogout}" style="margin:20px 0">
+					<div class="form-inline my-2 my-lg-0">
+						<button type="submit" class="btn btn-primary">Logout</button>
+					</div>
+				</form>
+				
 			</div>
 		</div>
 	</body>
